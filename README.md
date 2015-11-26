@@ -2,7 +2,7 @@
 
 [Yeoman](http://yeoman.io) generator for Front Kickstart using [jeet](http://jeet.gs/), [sass](http://sass-lang.com/) and [twig](https://github.com/justjohn/twig.js).
 
-## Yo Jeet!
+## Features!
 * Gulp tasking
 * Sass compiling
 * HTML compiled with twig.js
