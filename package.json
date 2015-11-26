@@ -22,13 +22,19 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator", "jeet", "twig", "sass", "gulp", "bower"
+    "yeoman-generator",
+    "jeet",
+    "twig",
+    "sass",
+    "gulp",
+    "bower"
   ],
   "dependencies": {
     "yeoman-generator": "~0.20.2",
     "chalk": "~1.0.0"
   },
   "devDependencies": {
+    "mkdirp": "^0.5.1",
     "mocha": "*"
   },
   "peerDependencies": {

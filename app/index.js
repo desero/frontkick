@@ -3,7 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
-
+var mkdirp = require('mkdirp');
 
 var FrontKickGenerator = yeoman.generators.Base.extend({
     init: function () {
@@ -23,23 +23,23 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
         this.log(this.yeoman);
 
         // replace it with a short and sweet description of your generator
-        this.log(chalk.magenta('Yo Jeet!.'));
+        this.log(chalk.magenta('Moarte!'));
 
         var prompts = [
           {
-            type: 'confirm',
+            type: 'input',
             name: 'KickFrontAppName',
             message: 'Name? (default with app)',
             default: 'app'
           },
           {
-            type: 'confirm',
+            type: 'input',
             name: 'KickFrontAppDescription',
             message: 'Name? (default with description)',
             default: 'description'
           },
           {
-            type: 'confirm',
+            type: 'input',
             name: 'KickFrontAppUrl',
             message: 'Name? (default with app.local)',
             default: 'app.local'
@@ -57,7 +57,7 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
 
     app: function () {
         // Main src folder
-        this.mkdir('src');
+        this.mkdirp('src');
 
         // TWIG
         this.copy('index.twig', 'src/index.twig');
@@ -66,17 +66,17 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
         this.copy('twig/navigation.twig', 'src/twig/navigation.twig');
 
         // SASS
-        this.mkdir('src/scss');
+        this.mkdirp('src/scss');
         this.copy('scss/_b64.scss', 'src/scss/_b64.scss');
         this.copy('scss/_settings.scss', 'src/scss_settings.scss');
         this.copy('scss/style.scss', 'src/scss/style.scss');
 
         // Javascript
-        this.mkdir('src/js');
+        this.mkdirp('src/js');
         this.copy('js/javascript.js', 'src/js/javascript.js');
 
         // MISC
-        this.mkdir('src/images');
+        this.mkdirp('src/images');
         this.mkdir('src/fonts');
 
         this.copy('_bowerrc', '.bowerrc');
