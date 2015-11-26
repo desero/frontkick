@@ -23,7 +23,7 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
         this.log(this.yeoman);
 
         // replace it with a short and sweet description of your generator
-        this.log(chalk.magenta('Moarte!'));
+        this.log(chalk.magenta('Moarte!!!'));
 
         var prompts = [
           {
@@ -57,7 +57,7 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
 
     app: function () {
         // Main src folder
-        this.mkdirp('src');
+        // this.mkdirp('src');
 
         // TWIG
         this.copy('index.twig', 'src/index.twig');
@@ -66,18 +66,18 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
         this.copy('twig/navigation.twig', 'src/twig/navigation.twig');
 
         // SASS
-        this.mkdirp('src/scss');
+        // this.mkdirp('src/scss');
         this.copy('scss/_b64.scss', 'src/scss/_b64.scss');
         this.copy('scss/_settings.scss', 'src/scss_settings.scss');
         this.copy('scss/style.scss', 'src/scss/style.scss');
 
         // Javascript
-        this.mkdirp('src/js');
+        // this.mkdirp('src/js');
         this.copy('js/javascript.js', 'src/js/javascript.js');
 
         // MISC
-        this.mkdirp('src/images');
-        this.mkdir('src/fonts');
+        mkdirp('src/images');
+        mkdirp('src/fonts');
 
         this.copy('_bowerrc', '.bowerrc');
         this.template('_package.json', 'package.json');
