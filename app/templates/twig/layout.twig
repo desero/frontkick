@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/style.min.css" media="screen" charset="utf-8" />
+  </head>
+  <body class="{{  current }}" id="page">
+    <div class="header">
+      <div class="wrapper">
+        {% include 'navigation.twig' %}
+        <a href="#" class="menu-trigger" id="mobile-nav-trigger">MENU</a>
+      </div>
+    </div>
+    {% block header %}{% endblock %}
+    <div class="page {{  current }}">
+      <div class="wrapper">
+        {% block page %}{% endblock %}
+      </div>
+    </div>
+    {% include 'footer.twig' %}
+    <script src="/js/javascript.min.js" charset="utf-8"></script>
+  </body>
+</html>

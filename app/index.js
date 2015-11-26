@@ -56,13 +56,14 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     },
 
     app: function () {
+        // Main src folder
         this.mkdir('src');
-        // this.mkdir('dist');
 
-        this.mkdir('src/images');
-        this.mkdir('src/fonts');
-
-        // this.copy('index.html', 'app/index.html');
+        // TWIG
+        this.copy('index.twig', 'src/index.twig');
+        this.copy('twig/footer.twig', 'src/twig/footer.twig');
+        this.copy('twig/layout.twig', 'src/twig/layout.twig');
+        this.copy('twig/navigation.twig', 'src/twig/navigation.twig');
 
         // SASS
         this.mkdir('src/scss');
@@ -70,13 +71,17 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
         this.copy('scss/_settings.scss', 'src/scss_settings.scss');
         this.copy('scss/style.scss', 'src/scss/style.scss');
 
+        // Javascript
         this.mkdir('src/js');
         this.copy('js/javascript.js', 'src/js/javascript.js');
+
+        // MISC
+        this.mkdir('src/images');
+        this.mkdir('src/fonts');
 
         this.copy('_bowerrc', '.bowerrc');
         this.template('_package.json', 'package.json');
         this.template('_bower.json', 'bower.json');
-
         this.copy('_gulpfile.js', 'gulpfile.js');
     },
 
