@@ -78,9 +78,12 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     },
 
     install: function () {
-        this.installDependencies();
-        this.spawnCommand('gulp', ['build']);
-        this.spawnCommand('gulp', ['webserver']);
+        this.installDependencies({
+          callback: function () {
+            this.spawnCommand('gulp', ['build']);
+            this.spawnCommand('gulp', ['webserver']);
+          }.bind(this)
+        });
     }
 });
 
