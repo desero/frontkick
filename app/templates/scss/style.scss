@@ -1,0 +1,21 @@
+@import 'bower_components/normalize-scss/normalize.scss';
+@import 'bower_components/compass-breakpoint/stylesheets/breakpoint';
+@import 'bower_components/jeet/scss/jeet/index';
+
+@import 'settings';
+@import 'b64';
+
+$large: 1024px;
+
+$palette: (
+  'green': #00B141,
+  'orange': #FC6719,
+  'purple': #742E8B,
+  'pink': #EF3EA9
+);
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  color: color('green');
+}
