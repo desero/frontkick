@@ -1,12 +1,12 @@
 {
   "name": "generator-frontkick",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Yeoman generator for Frontend Kickstart",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "desero/generator-frontkick",
-  "homepage": "https://github.com/desero/generator-frontkick",
-  "bugs": "https://github.com/desero/generator-frontkick/issues",
+  "homepage": "https://github.com/desero/frontkick",
+  "bugs": "https://github.com/desero/frontkick/issues",
   "author": {
     "name": "desero",
     "email": "desero@desero.com",
