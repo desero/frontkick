@@ -1,23 +1,25 @@
 /*global describe, beforeEach, it */
 'use strict';
+
 var path = require('path');
 var helpers = require('yeoman-generator').test;
 var assert = require('yeoman-generator').assert;
 
 before(function(done){
   helpers.run(path.join( __dirname, '../app'))
-  .withPrompts({
-    'KickFrontAppName': 'app',
-    'KickFrontAppDescription': 'app',
-    'KickFrontAppUrl': 'url'
+  .withOptions({
+    name: 'frontkick-app',
+    description: 'Frontkick app generated with Yeoman',
+    repo: 'git://github.com/foo/bar.git',
+    url: 'app.local'
   })
-  .on('ready', function(generator) {
-
+  .on('ready', function (generator) {
+    // This is called right before `generator.run()` is called
   })
   .on('end', done);
 });
 
-describe('frontkick generator', function() {
+describe('frontkick generator with options', function() {
   it('copies twig index file',function() {
     assert.file('src/index.twig');
   });

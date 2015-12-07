@@ -1,4 +1,5 @@
-#<%= KickFrontAppName %>
+#<%= name %>
+<%= description %>
 
 ### Setup & build
 

@@ -1,19 +1,23 @@
 {
-  "name": "<%= KickFrontAppName %>",
+  "name": "<%= name %>",
   "version": "0.0.1",
   "authors": [
     "desero <desero@desero.com>"
   ],
-  "description": "<%= KickFrontAppDescription %>",
+  "description": "<%= description %>",
   "main": "bower.json",
   "moduleType": [
     "node"
   ],
+  "repository": {
+    "type": "git",
+    "url": "<%= repo %>"
+  },
   "keywords": [
     "jeet"
   ],
   "license": "MIT",
-  "homepage": "<%= KickFrontAppUrl %>",
+  "homepage": "<%= url %>",
   "ignore": [
     "**/.*",
     "node_modules",

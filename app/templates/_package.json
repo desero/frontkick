@@ -1,21 +1,21 @@
 {
-  "name": "<%= KickFrontAppName %>",
+  "name": "<%= name %>",
   "version": "0.0.1",
-  "description": "<%= KickFrontAppDescription %>",
+  "description": "<%= description %>",
+  "homepage": "<%= url %>",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/desero/presslabs.git"
+    "url": "<%= repo %>"
   },
   "keywords": [
     "jeet"
   ],
   "author": "desero",
   "license": "ISC",
-  "homepage": "<%= KickFrontAppUrl %>",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",

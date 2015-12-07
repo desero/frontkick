@@ -53,6 +53,11 @@ $ gulp webserver
 
 #### Changelog
 
-##### 0.0.1 (26.11.2015)
+##### 0.3.0 (7.12.2015)
+* Added repository filed
+* Fixed some minor issues
+* Added the ability to skip prompts with passed options via CLI
+* Cleanup
 
-- init
+##### 0.0.1 (26.11.2015)
+* Initial release
