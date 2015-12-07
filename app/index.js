@@ -26,25 +26,25 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     this._optionOrPrompt([{
       type    : 'input',
       name    : 'name',
-      message : 'Name? (default with app)',
+      message : 'Name:',
       default : 'app'
     },
     {
       type: 'input',
       name: 'description',
-      message: 'Description? (default with description)',
+      message: 'Description:',
       default: 'description'
     },
     {
       type: 'input',
       name: 'url',
-      message: 'URL? (default with app.local)',
+      message: 'URL:',
       default: 'app.local'
     },
     {
       type: 'input',
       name: 'repo',
-      message: 'Repository (default with git://github.com/foo/bar.git)',
+      message: 'Repository:',
       default: 'git://github.com/foo/bar.git'
     }
   ], function (answers) {
