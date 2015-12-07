@@ -82,12 +82,9 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     this.copy('_gulpfile.js', 'gulpfile.js');
   },
 
-  install: function () {
-    this.installDependencies({
-      callback: function () {
-        chalk.green('You can run ') + chalk.blue('gulp build && gulp webserver') + chalk.green(' to preview the default build in your browser.');
-      }.bind(this)
-    });
+  end: function () {
+    var howToInstall = '\nYou can run ' + chalk.yellow.bold('gulp build && gulp webserver') + ' to preview the default build in your browser. ' + '\nYou can run the watcher ' + chalk.yellow.bold('gulp watcher') + ' to watch for your files in dev enviroment.';
+    this.log(howToInstall);
   }
 });
 
