@@ -44,7 +44,6 @@ gulp.task('webserver', function() {
   gulp.src('dist')
     .pipe(webserver({
       livereload: true,
-      // directoryListing: true,
       open: true,
       host: '0.0.0.0',
       port: 8000
@@ -54,7 +53,6 @@ gulp.task('webserver', function() {
 gulp.task('javascript', function() {
   gulp.src('./src/js/*.js')
     .pipe(rename({suffix: '.min'}))
-    // .pipe(uglify())
     .pipe(gulp.dest('./dist/js'))
 });
 
@@ -67,38 +65,22 @@ gulp.task('images', function () {
 
 gulp.task('dependecies', function () {
   gulp.src([
-      // './bower_components/mediaelement/build/mediaelementplayer.css'
-    ])
-    .pipe(gulp.dest('./dist/css'))
-  gulp.src([
       './bower_components/jquery/dist/jquery.min.js',
       './bower_components/jquery/dist/jquery.min.map'//,
-      // './bower_components/jquery-timeago/jquery.timeago.js',
-      // './bower_components/slick-carousel/slick/slick.min.js',
-      // './bower_components/mediaelement/build/mediaelement-and-player.min.js',
-      // './bower_components/typed.js/js/typed.js'
     ])
     .pipe(gulp.dest('./dist/js'))
   gulp.src([
-      // './bower_components/slick-carousel/slick/fonts/slick.eot',
-      // './bower_components/slick-carousel/slick/fonts/slick.svg',
-      // './bower_components/slick-carousel/slick/fonts/slick.ttf',
-      // './bower_components/slick-carousel/slick/fonts/slick.woff',
       './src/fonts/*.*'
     ])
     .pipe(gulp.dest('./dist/fonts'))
-  gulp.src([
-    // './bower_components/slick-carousel/slick/ajax-loader.gif',
-    // './bower_components/mediaelement/build/controls.svg',
-    // './bower_components/mediaelement/build/loading.gif',
-    ])
-    .pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('twig', function () {
   gulp.src('./src/*.twig')
     .pipe(twig({
       filters: [
+
+        // Random color generator for placehold.it images
         {
           name: "color",
           func: function (args) {
@@ -119,6 +101,7 @@ gulp.task('twig', function () {
             }
           }
         }
+
       ]
     }))
     .pipe(prettify({indent_char: ' ', indent_size: 2}))

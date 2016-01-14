@@ -21,6 +21,12 @@ Build the site
 gulp build
 ```
 
+Watch assets for changes
+
+```shell
+gulp watch
+```
+
 Open the site in web browser
 
 ```shell
