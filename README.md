@@ -53,6 +53,10 @@ $ gulp webserver
 
 #### Changelog
 
+##### 0.3.5 (14.1.2016)
+* Added gulp watch command to app readme file
+* Gulp taksk cleanup
+
 ##### 0.3.0 (7.12.2015)
 * Added repository filed
 * Fixed some minor issues
