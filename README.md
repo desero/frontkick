@@ -53,6 +53,10 @@ $ gulp webserver
 
 #### Changelog
 
+##### 0.3.6 (24.2.2016)
+* Fixed sass folder name
+* Minor sass fixes
+
 ##### 0.3.5 (14.1.2016)
 * Added gulp watch command to app readme file
 * Gulp taksk cleanup

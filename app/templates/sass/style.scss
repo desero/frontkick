@@ -15,7 +15,13 @@ $palette: (
 );
 
 * {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
-  color: color('green');
+}
+
+body {
+  font-family: $font__main;
+  background-color: color('green');
+  @include breakpoint($large) {
+    background-color: color('orange');
+  }
 }

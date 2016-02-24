@@ -37,9 +37,15 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     },
     {
       type: 'input',
+      name: 'author',
+      message: 'Author:',
+      default: 'author <author@example.com>'
+    },
+    {
+      type: 'input',
       name: 'url',
       message: 'URL:',
-      default: 'app.local'
+      default: 'http://0.0.0.0:8000'
     },
     {
       type: 'input',
@@ -64,9 +70,9 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
     this.copy('twig/navigation.twig', 'src/twig/navigation.twig');
 
     // SASS
-    this.copy('scss/_b64.scss', 'src/scss/_b64.scss');
-    this.copy('scss/_settings.scss', 'src/scss/_settings.scss');
-    this.copy('scss/style.scss', 'src/scss/style.scss');
+    this.copy('sass/_b64.scss', 'src/sass/_b64.scss');
+    this.copy('sass/_settings.scss', 'src/sass/_settings.scss');
+    this.copy('sass/style.scss', 'src/sass/style.scss');
 
     // Javascript
     this.copy('js/javascript.js', 'src/js/javascript.js');

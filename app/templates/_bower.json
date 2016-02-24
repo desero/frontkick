@@ -2,7 +2,7 @@
   "name": "<%= name %>",
   "version": "0.0.1",
   "authors": [
-    "desero <desero@desero.com>"
+    "<%= author %>"
   ],
   "description": "<%= description %>",
   "main": "bower.json",
@@ -28,6 +28,6 @@
   "devDependencies": {
     "jeet": "~6.1.2",
     "normalize-scss": "~3.0.3",
-    "compass-breakpoint": "~2.6.1"
+    "compass-breakpoint": "~2.7.0"
   }
 }
