@@ -53,6 +53,9 @@ $ gulp webserver
 
 #### Changelog
 
+##### 0.3.8 (29.2.2016)
+* Fixed a critical error
+
 ##### 0.3.6 (24.2.2016)
 * Fixed sass folder name
 * Minor sass fixes

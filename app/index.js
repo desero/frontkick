@@ -56,6 +56,7 @@ var FrontKickGenerator = yeoman.generators.Base.extend({
   ], function (answers) {
       this.name = answers.name;
       this.description = answers.description;
+      this.author = answers.author;
       this.url = answers.url;
       this.repo = answers.repo;
       done();
